@@ -35,7 +35,8 @@ Creating a Backup
    If you wish to send your backup to a (currently running) AppVM, select the AppVM in the drop-down box next to **Target AppVM**.
    If you wish to send your backup to a [USB mass storage device](/doc/stick-mounting/), first mount the device in an AppVM, then select the mount point inside that AppVM as the backup destination.
 
-   You must also specify a directory on the device or in the AppVM, or a command to be executed in the AppVM as a destination for your backup. For example, if you wish to send your backup to the `~/backups` folder in the target AppVM, you would simply type `backups` in this field. This destination directory must already exist. If it does not exist, you must create it manually prior to backing up.
+   You must also specify a directory on the device or in the AppVM, or a command to be executed in the AppVM as a destination for your backup. For example, if you wish to send your backup to the `~/backups` folder in the target AppVM, you would simply type `backups` in this field. This destination directory must already exist. If it does not exist, you must create it manually prior to backing up. Make sure that the selected directory is "owned" by the  AppVM user (for example, run 'sudo chown user:user  backup-path' in a terminal.).
+
 
    By specifying the appropriate directory as the destination in an AppVM, it is possible to send the backup directly to, e.g., a USB mass storage device attached to the AppVM. Likewise, it is possible to enter any command as a backup target by specifying the command as the destination in the AppVM. This can be used to send your backup directly to, e.g., a remote server using SSH.
 
